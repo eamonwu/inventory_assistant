@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzu.inventory_assistant.mapper.GoodsMapper">
+    <select id="getGoodsById" parameterType="int" resultType="goods">
+        select *
+        from t_goods
+        where id = #{id}
+    </select>
+    <select id="getGoodsByOwnerId" parameterType="map" resultType="goods">
+        select *
+        from t_goods
+        where owner_id = #{ownerId}
+    </select>
+
+    <insert id="addGoods" parameterType="goods">
+        insert into t_goods(goods_group,
+                            goods_name,
+                            image_url,
+                            start_date,
+                            end_date,
+                            annotation,
+                            owner_id)
+        values (#{goodsGroup},
+                #{goodsName},
+                #{imageUrl},
+                #{startDate},
+                #{endDate},
+                #{annotation},
+                #{ownerId})
+    </insert>
+
+    <delete id="deleteGoods" parameterType="int">
+        delete
+        from t_goods
+        where id =
+              #{id}
+    </delete>
+</mapper>

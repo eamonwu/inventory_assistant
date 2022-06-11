@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzu.inventory_assistant.mapper.UserMapper">
+    <select id="getUserById" parameterType="int" resultType="user">
+        select *
+        from t_user
+        where id = #{id}
+    </select>
+    <select id="getUserByAccount" parameterType="string" resultType="user">
+        select *
+        from t_user
+        where user_account = #{account}
+    </select>
+    <select id="getUserByEmail" parameterType="string" resultType="user">
+        select *
+        from t_user
+        where user_email = #{email}
+    </select>
+    <insert id="addUser" parameterType="user">
+        insert into t_user(user_account,
+                           user_password,
+                           user_email,
+                           register_date)
+        values (#{userAccount},
+                #{userPassword},
+                #{userEmail},
+                #{registerDate})
+    </insert>
+
+</mapper>
