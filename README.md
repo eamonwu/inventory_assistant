@@ -1,0 +1,12 @@
+# inventory-assistant
+![image](images/login.png)
+![image](images/login_register.png)
+![image](images/waterfall_room.png)
+![image](images/waterfall_room_no_atuo.png)
+![image](images/list_room.png)
+![image](images/theme_blue.png)
+![image](images/theme_lightblue.png)
+![image](images/theme_pink.png)
+![image](images/settings.png)
+![image](images/add_screen.png)
+![image](images/chart.png)
