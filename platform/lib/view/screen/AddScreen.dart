@@ -16,6 +16,7 @@ List colors = [
   Color.fromARGB(255, 1, 136, 5),
   Color.fromARGB(255, 207, 187, 8),
   Colors.red,
+  Colors.blue,
 ];
 
 class MainScreen extends StatelessWidget {
